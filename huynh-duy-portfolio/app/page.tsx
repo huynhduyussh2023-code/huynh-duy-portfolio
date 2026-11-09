@@ -6,7 +6,7 @@ type Lang = "vi" | "en";
 
 const copy = {
   vi: {
-    nav: ["Trang chủ", "Giới thiệu", "Kỹ năng", "Dự án tiêu biểu", "Kinh nghiệm", "Liên hệ"],
+    nav: ["TRANG CHỦ", "VỀ TÔI", "KỸ NĂNG", "KINH NGHIỆM", "DỰ ÁN", "LIÊN HỆ"],
     role: "MARKETING & PR INTERN",
     eyebrow: "PORTFOLIO CÁ NHÂN · 2026",
     hero1: "Sáng tạo.",
@@ -48,7 +48,7 @@ const copy = {
     ],
   },
   en: {
-    nav: ["Home", "About Me", "Skills", "Selected Works", "Experience", "Contact"],
+    nav: ["HOME", "ABOUT ME", "SKILLS & EXPERTISE", "EXPERIENCE & ACHIEVEMENTS", "SELECTED WORKS", "CONTACT"],
     role: "MARKETING & PR INTERN",
     eyebrow: "PERSONAL PORTFOLIO · 2026",
     hero1: "Creative.",
