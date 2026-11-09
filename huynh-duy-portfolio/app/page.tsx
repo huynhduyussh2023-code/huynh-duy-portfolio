@@ -163,10 +163,62 @@ export default function Home() {
       <section className="section-wrap works-section" id="works">
         <div className="section-kicker">03 / SELECTED WORKS</div>
         <div className="section-heading"><h2>{t.worksTitle}<span className="chrome-dot">.</span></h2><p>{t.worksSub}</p></div>
-        <div className="project-grid">{t.projects.map((p, i) => <article className="project-card" key={p.title}>
-          <div className={`project-art art-${i+1}`}><span className="art-number">0{i+1}</span><span className="art-word">{["STILL","PULSE","FRESH","INTERACTIVE","MOTION","STORY"][i]}</span><span className="art-orb" /></div>
-          <div className="project-info"><div className="project-meta"><span>{t.course}: {p.course}</span><span>{p.role}</span></div><h3>{p.title}</h3><p>{p.desc}</p><div className="tags">{p.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{p.link && <a className="project-link" href={p.link} target="_blank" rel="noreferrer">{p.linkLabel} ↗</a>}</div>
-        </article>)}</div>
+        <div className="project-grid">
+  {t.projects.map((p, i) => (
+    <article
+      className="project-card"
+      key={p.title}
+      onClick={() => setSelectedProject(i)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          setSelectedProject(i);
+        }
+      }}
+    >
+      <div className={`project-art art-${i + 1}`}>
+        <span className="art-number">0{i + 1}</span>
+        <span className="art-word">
+          {["STILL", "PULSE", "FRESH", "INTERACTIVE", "MOTION", "STORY"][i]}
+        </span>
+        <span className="art-orb" />
+      </div>
+
+      <div className="project-info">
+        <div className="project-meta">
+          <span>{t.course}: {p.course}</span>
+          <span>{p.role}</span>
+        </div>
+
+        <h3>{p.title}</h3>
+        <p>{p.desc}</p>
+
+        <div className="tags">
+          {p.tags.map((tag) => (
+            <span key={tag}>{tag}</span>
+          ))}
+        </div>
+
+        {p.link && (
+          <a
+            className="project-link"
+            href={p.link}
+            target="_blank"
+            rel="noreferrer"
+            onClick={(event) => event.stopPropagation()}
+          >
+            {p.linkLabel} ↗
+          </a>
+        )}
+
+        <span className="project-view-hint">
+          {lang === "vi" ? "NHẤN ĐỂ KHÁM PHÁ ↗" : "CLICK TO EXPLORE ↗"}
+        </span>
+      </div>
+    </article>
+  ))}
+</div>
       </section>
 
       <section className="section-wrap experience-section" id="experience">
