@@ -212,9 +212,6 @@ export default function Home() {
           </a>
         )}
 
-        <span className="project-view-hint">
-          {lang === "vi" ? "NHẤN ĐỂ KHÁM PHÁ ↗" : "CLICK TO EXPLORE ↗"}
-        </span>
       </div>
     </article>
   ))}
