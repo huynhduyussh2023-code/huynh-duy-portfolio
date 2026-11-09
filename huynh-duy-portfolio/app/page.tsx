@@ -136,7 +136,11 @@ export default function Home() {
 
       <section className="section-wrap skills-section" id="skills">
         <div className="section-kicker">02 / CAPABILITIES</div><div className="section-heading"><h2>{t.skillsTitle}</h2><p>{t.skillsSub}</p></div>
-        <div className="skill-grid">{t.skillGroups.map(([group, items]) => <div className="skill-card" key={String(group)}><p className="card-label">{group}</p><ul>{items.map(x => <li key={x}>{x}</li>)}</ul><span className="card-cross">✳</span></div>)}</div>
+        <div className="skill-grid">{t.skillGroups.map(([group, items]) => <div className="skill-card" key={String(group)}><p className="card-label">{group}</p><ul>
+  {Array.isArray(items)
+    ? items.map(x => <li key={x}>{x}</li>)
+    : <li>{items}</li>}
+</ul><span className="card-cross">✳</span></div>)}</div>
         <div className="language-line"><span>{t.language}</span><b>{t.languageText}</b></div>
       </section>
 
