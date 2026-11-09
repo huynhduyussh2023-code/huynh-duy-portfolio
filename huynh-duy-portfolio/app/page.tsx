@@ -233,6 +233,65 @@ export default function Home() {
         <div className="contact-links"><a href="mailto:huynhduyussh2023@gmail.com"><span>EMAIL</span><b>huynhduyussh2023@gmail.com</b><i>↗</i></a><a href="tel:+84942048922"><span>PHONE</span><b>0942-048-922</b><i>↗</i></a><div><span>LOCATION</span><b>{t.location}</b><i>⌖</i></div></div>
       </section>
       <footer><a className="brand" href="#home"><span className="brand-mark">HD.</span><span>HUỲNH DUY</span></a><span>© 2026 NGUYỄN HỮU HUỲNH DUY</span><span>{t.footer}</span></footer>
+   {selectedProject !== null && (
+  <div
+    className="project-modal-backdrop"
+    onClick={() => setSelectedProject(null)}
+  >
+    <div
+      className="project-modal"
+      role="dialog"
+      aria-modal="true"
+      onClick={(event) => event.stopPropagation()}
+    >
+      <button
+        className="project-modal-close"
+        onClick={() => setSelectedProject(null)}
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div className="project-modal-kicker">
+        PROJECT DETAILS / 0{selectedProject + 1}
+      </div>
+
+      <h2>{t.projects[selectedProject].title}</h2>
+
+      <div className="project-modal-meta">
+        <span>{t.course}: {t.projects[selectedProject].course}</span>
+        <span>{t.projects[selectedProject].role}</span>
+      </div>
+
+      <p>{t.projects[selectedProject].desc}</p>
+
+      <div className="project-modal-art">
+        <span>0{selectedProject + 1}</span>
+        <strong>
+          {["STILL", "PULSE", "FRESH", "INTERACTIVE", "MOTION", "STORY"][selectedProject]}
+        </strong>
+        <span>CREATIVE PROJECT</span>
+      </div>
+
+      <div className="tags">
+        {t.projects[selectedProject].tags.map((tag) => (
+          <span key={tag}>{tag}</span>
+        ))}
+      </div>
+
+      {t.projects[selectedProject].link && (
+        <a
+          className="project-link"
+          href={t.projects[selectedProject].link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t.projects[selectedProject].linkLabel} ↗
+        </a>
+      )}
+    </div>
+  </div>
+)}
     </main>
   );
 }
