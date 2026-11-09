@@ -127,9 +127,18 @@ export default function Home() {
         <div className="portrait-stage">
           <div className="orbit orbit-a" /><div className="orbit orbit-b" />
           <div className="portrait-card">
-            <div className="portrait-placeholder"><span className="portrait-initials">HD</span><span className="portrait-caption">YOUR PORTRAIT<br/>GOES HERE</span></div>
-            <div className="portrait-meta"><span>CREATIVE MINDSET</span><span>01 / 06</span></div>
-          </div>
+  <div className="portrait-placeholder">
+    <img
+      src="/anhcv.jpg"
+      alt="Huỳnh Duy - Marketing & PR"
+      className="portrait-image"
+    />
+  </div>
+  <div className="portrait-meta">
+    <span>CREATIVE MINDSET</span>
+    <span>01 / 06</span>
+  </div>
+</div>
           <div className="float-tag tag-one">STRATEGY <b>✳</b></div><div className="float-tag tag-two">STORYTELLING <b>↗</b></div>
           <div className="hero-index">HCMC · VIETNAM<br/>10°49' N / 106°38' E</div>
         </div>
