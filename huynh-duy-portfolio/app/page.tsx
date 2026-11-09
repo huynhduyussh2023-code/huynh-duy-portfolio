@@ -382,8 +382,10 @@ export default function Home() {
               alt="Hồi Thanh"
               style={{
                 width: "100%",
-                height: "420px",
-                objectFit: "cover",
+                height: "auto",
+maxHeight: "520px",
+                objectFit: "contain",
+backgroundColor: "#080d18",
                 borderRadius: "14px",
                 display: "block",
               }}
