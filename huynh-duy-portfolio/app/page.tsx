@@ -94,6 +94,7 @@ const copy = {
 export default function Home() {
   const [lang, setLang] = useState<Lang>("vi");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const t = copy[lang];
   const ids = ["home", "about", "skills", "works", "experience", "contact"];
 
