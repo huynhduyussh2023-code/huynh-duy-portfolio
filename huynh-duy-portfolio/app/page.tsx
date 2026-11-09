@@ -97,7 +97,7 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedExperience, setSelectedExperience] = useState<number | null>(null);
   const t = copy[lang];
-  const ids = ["home", "about", "skills", "works", "experience", "contact"];
+  const ids = ["home", "about", "skills", "experience", "works", "contact"];
 
   return (
     <main>
