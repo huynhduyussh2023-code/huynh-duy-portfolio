@@ -290,3 +290,62 @@ body::after {
 .portrait-card:hover .portrait-image {
   transform: scale(1.04);
 }
+{selectedProject !== null && (
+  <div
+    className="project-modal-backdrop"
+    onClick={() => setSelectedProject(null)}
+  >
+    <div
+      className="project-modal"
+      role="dialog"
+      aria-modal="true"
+      onClick={(event) => event.stopPropagation()}
+    >
+      <button
+        className="project-modal-close"
+        onClick={() => setSelectedProject(null)}
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div className="project-modal-kicker">
+        PROJECT DETAILS / 0{selectedProject + 1}
+      </div>
+
+      <h2>{t.projects[selectedProject].title}</h2>
+
+      <div className="project-modal-meta">
+        <span>{t.course}: {t.projects[selectedProject].course}</span>
+        <span>{t.projects[selectedProject].role}</span>
+      </div>
+
+      <p>{t.projects[selectedProject].desc}</p>
+
+      <div className="project-modal-art">
+        <span>0{selectedProject + 1}</span>
+        <strong>
+          {["STILL", "PULSE", "FRESH", "INTERACTIVE", "MOTION", "STORY"][selectedProject]}
+        </strong>
+        <span>CREATIVE PROJECT</span>
+      </div>
+
+      <div className="tags">
+        {t.projects[selectedProject].tags.map((tag) => (
+          <span key={tag}>{tag}</span>
+        ))}
+      </div>
+
+      {t.projects[selectedProject].link && (
+        <a
+          className="project-link"
+          href={t.projects[selectedProject].link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t.projects[selectedProject].linkLabel} ↗
+        </a>
+      )}
+    </div>
+  </div>
+)}
