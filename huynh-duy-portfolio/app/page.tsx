@@ -9,9 +9,9 @@ const copy = {
     nav: ["Trang chủ", "Giới thiệu", "Kỹ năng", "Dự án tiêu biểu", "Kinh nghiệm", "Liên hệ"],
     role: "MARKETING & PR INTERN",
     eyebrow: "PORTFOLIO CÁ NHÂN · 2026",
-    hero1: "Ý tưởng",
-    hero2: "tạo nên",
-    hero3: "kết nối.",
+    hero1: "Sáng tạo.",
+    hero2: "Chuyên nghiệp.",
+    hero3: "Trách nhiệm.",
     intro: "Sinh viên năm cuối ngành Truyền thông đa phương tiện, được đào tạo bài bản về Marketing, Xây dựng thương hiệu và Quan hệ công chúng. Có kinh nghiệm tham gia các dự án truyền thông và hoạt động ngoại khóa.",
     cta: "Khám phá dự án",
     about: "Tôi là Huỳnh Duy",
@@ -44,16 +44,16 @@ const copy = {
       { title: "HAYDAY KOMBUCHA — VINAMILK", course: "Advertising", role: "Campaign Planning", desc: "Xây dựng proposal chiến dịch quảng bá sản phẩm Kombucha HayDay. Nghiên cứu bối cảnh mạng xã hội, định vị thương hiệu, đối thủ, USP và khách hàng mục tiêu; đóng góp Big Idea, kế hoạch triển khai và bài viết báo chí.", tags: ["Brand Research", "Big Idea", "Advertising"] },
       { title: "GÕ CỬA NHÀ MỸ NAM", course: "Website Design and Administration", role: "Website Concept & Design", desc: "Thiết kế website quảng bá phim tương tác do Yeah1 và Mango TV sản xuất. Phụ trách ý tưởng, moodboard, nghiên cứu nội dung phim, thiết kế website và các materials.", tags: ["Web Design", "Moodboard", "Visual Content"], link: "https://gocuanhamynam.vercel.app", linkLabel: "Mở website" },
       { title: "232 TUỔI — THE FLOB × CHUPA CHUPS", course: "Project 2: Audio - Visual Production", role: "Creative & Production Team", desc: "Thực hiện MV remake lồng ghép quảng cáo Chupa Chups. Phát triển ý tưởng và Big Idea, liên hệ The Flob, phụ trách các vấn đề âm nhạc; tham gia lựa chọn trang phục, tìm kiếm và casting diễn viên, chọn địa điểm quay và góp ý hậu kỳ.", tags: ["Music Video", "Production", "Casting"], link: "https://drive.google.com/file/d/1bsmt0bQbmOt5PXVZ6sFqpF9Eqeidf0FD/view?usp=drivesdk", linkLabel: "Xem MV" },
-      { title: "SẮP NGỬA", course: "Introduction to Film Directing", role: "Concept & Scriptwriting", desc: "Phim ngắn 15 phút thuộc chủ đề tâm lý – xã hội. Phát triển ý tưởng, chủ đề tư tưởng, logline và kịch bản chi tiết; đảm nhận lựa chọn, casting diễn viên và góp ý hậu kỳ.", tags: ["Short Film", "Scriptwriting", "Casting"], link: "https://drive.google.com/file/d/1nU1vaTUKrXLQzCJa02v4s6DuEjlXkKVd/view?usp=drivesdk", linkLabel: "Xem phim" },
+      { title: "SẤP NGỬA", course: "Introduction to Film Directing", role: "Concept & Scriptwriting", desc: "Phim ngắn 15 phút thuộc chủ đề tâm lý – xã hội. Phát triển ý tưởng, chủ đề tư tưởng, logline và kịch bản chi tiết; đảm nhận lựa chọn, casting diễn viên và góp ý hậu kỳ.", tags: ["Short Film", "Scriptwriting", "Casting"], link: "https://drive.google.com/file/d/1nU1vaTUKrXLQzCJa02v4s6DuEjlXkKVd/view?usp=drivesdk", linkLabel: "Xem phim" },
     ],
   },
   en: {
     nav: ["Home", "About Me", "Skills", "Selected Works", "Experience", "Contact"],
     role: "MARKETING & PR INTERN",
     eyebrow: "PERSONAL PORTFOLIO · 2026",
-    hero1: "Ideas",
-    hero2: "that build",
-    hero3: "connections.",
+    hero1: "Creative.",
+    hero2: "Professional.",
+    hero3: "Responsible.",
     intro: "A final-year Multimedia Communications student with academic training in Marketing, Branding, and Public Relations. Experienced in communication projects and extracurricular activities.",
     cta: "Explore projects",
     about: "Hello, I'm Huỳnh Duy",
@@ -86,7 +86,7 @@ const copy = {
       { title: "HAYDAY KOMBUCHA — VINAMILK", course: "Advertising", role: "Campaign Planning", desc: "Developed an advertising campaign proposal for HayDay Kombucha. Researched social context, brand positioning, competitors, USP, and target audience; contributed to the Big Idea, campaign rollout plan, and press content.", tags: ["Brand Research", "Big Idea", "Advertising"] },
       { title: "GÕ CỬA NHÀ MỸ NAM", course: "Website Design and Administration", role: "Website Concept & Design", desc: "Designed a promotional website for the interactive film produced by Yeah1 and Mango TV. Developed the concept and moodboard, researched the film, and created the website and its visual materials.", tags: ["Web Design", "Moodboard", "Visual Content"], link: "https://gocuanhamynam.vercel.app", linkLabel: "Open website" },
       { title: "232 TUỔI — THE FLOB × CHUPA CHUPS", course: "Project 2: Audio - Visual Production", role: "Creative & Production Team", desc: "Produced a remake music video integrating a Chupa Chups advertisement. Developed the concept and Big Idea, liaised with The Flob on music-related matters, and contributed to styling, casting, location scouting, and post-production feedback.", tags: ["Music Video", "Production", "Casting"], link: "https://drive.google.com/file/d/1bsmt0bQbmOt5PXVZ6sFqpF9Eqeidf0FD/view?usp=drivesdk", linkLabel: "Watch MV" },
-      { title: "SẮP NGỬA", course: "Introduction to Film Directing", role: "Concept & Scriptwriting", desc: "A 15-minute psychological-social short film. Developed the concept, central theme, logline, and detailed screenplay; took part in actor selection and casting, and provided post-production feedback.", tags: ["Short Film", "Scriptwriting", "Casting"], link: "https://drive.google.com/file/d/1nU1vaTUKrXLQzCJa02v4s6DuEjlXkKVd/view?usp=drivesdk", linkLabel: "Watch film" },
+      { title: "SẤP NGỬA", course: "Introduction to Film Directing", role: "Concept & Scriptwriting", desc: "A 15-minute psychological-social short film. Developed the concept, central theme, logline, and detailed screenplay; took part in actor selection and casting, and provided post-production feedback.", tags: ["Short Film", "Scriptwriting", "Casting"], link: "https://drive.google.com/file/d/1nU1vaTUKrXLQzCJa02v4s6DuEjlXkKVd/view?usp=drivesdk", linkLabel: "Watch film" },
     ],
   },
 };
@@ -96,9 +96,13 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const t = copy[lang];
   const ids = ["home", "about", "skills", "works", "experience", "contact"];
+
   return (
     <main>
-      <div className="ambient ambient-one" /><div className="ambient ambient-two" /><div className="grain" />
+      <div className="ambient ambient-one" />
+      <div className="ambient ambient-two" />
+      <div className="grain" />
+
       <header className="topbar">
         <a className="brand" href="#home"><span className="brand-mark">HD.</span><span>HUỲNH DUY</span></a>
         <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">☰</button>
@@ -113,10 +117,13 @@ export default function Home() {
           <p className="eyebrow"><span className="live-dot" />{t.eyebrow}</p>
           <p className="hero-name">NGUYỄN HỮU<br/>HUỲNH DUY<span className="chrome-dot">.</span></p>
           <p className="role">{t.role}</p>
-          <h1>{t.hero1}<br/><em>{t.hero2}</em><br/>{t.hero3}</h1>
+          <h1 className="hero-tagline">
+            {t.hero1}<br/><em>{t.hero2}</em><br/>{t.hero3}
+          </h1>
           <p className="hero-intro">{t.intro}</p>
           <a className="text-link" href="#works">{t.cta} <span>↗</span></a>
         </div>
+
         <div className="portrait-stage">
           <div className="orbit orbit-a" /><div className="orbit orbit-b" />
           <div className="portrait-card">
@@ -135,17 +142,17 @@ export default function Home() {
       </section>
 
       <section className="section-wrap skills-section" id="skills">
-        <div className="section-kicker">02 / CAPABILITIES</div><div className="section-heading"><h2>{t.skillsTitle}</h2><p>{t.skillsSub}</p></div>
+        <div className="section-kicker">02 / CAPABILITIES</div>
+        <div className="section-heading"><h2>{t.skillsTitle}</h2><p>{t.skillsSub}</p></div>
         <div className="skill-grid">{t.skillGroups.map(([group, items]) => <div className="skill-card" key={String(group)}><p className="card-label">{group}</p><ul>
-  {Array.isArray(items)
-    ? items.map(x => <li key={x}>{x}</li>)
-    : <li>{items}</li>}
-</ul><span className="card-cross">✳</span></div>)}</div>
+          {Array.isArray(items) ? items.map(x => <li key={x}>{x}</li>) : <li>{items}</li>}
+        </ul><span className="card-cross">✳</span></div>)}</div>
         <div className="language-line"><span>{t.language}</span><b>{t.languageText}</b></div>
       </section>
 
       <section className="section-wrap works-section" id="works">
-        <div className="section-kicker">03 / SELECTED WORKS</div><div className="section-heading"><h2>{t.worksTitle}<span className="chrome-dot">.</span></h2><p>{t.worksSub}</p></div>
+        <div className="section-kicker">03 / SELECTED WORKS</div>
+        <div className="section-heading"><h2>{t.worksTitle}<span className="chrome-dot">.</span></h2><p>{t.worksSub}</p></div>
         <div className="project-grid">{t.projects.map((p, i) => <article className="project-card" key={p.title}>
           <div className={`project-art art-${i+1}`}><span className="art-number">0{i+1}</span><span className="art-word">{["STILL","PULSE","FRESH","INTERACTIVE","MOTION","STORY"][i]}</span><span className="art-orb" /></div>
           <div className="project-info"><div className="project-meta"><span>{t.course}: {p.course}</span><span>{p.role}</span></div><h3>{p.title}</h3><p>{p.desc}</p><div className="tags">{p.tags.map(tag => <span key={tag}>{tag}</span>)}</div>{p.link && <a className="project-link" href={p.link} target="_blank" rel="noreferrer">{p.linkLabel} ↗</a>}</div>
@@ -153,7 +160,8 @@ export default function Home() {
       </section>
 
       <section className="section-wrap experience-section" id="experience">
-        <div className="section-kicker">04 / EXPERIENCE</div><div className="section-heading"><h2>{t.experienceTitle}</h2><p>PROJECTS · PEOPLE · IMPACT</p></div>
+        <div className="section-kicker">04 / EXPERIENCE</div>
+        <div className="section-heading"><h2>{t.experienceTitle}</h2><p>PROJECTS · PEOPLE · IMPACT</p></div>
         <div className="timeline">{t.exp.map((e, i) => <article className="timeline-item" key={e.name}><div className="timeline-count">0{i+1}</div><div className="timeline-main"><div className="timeline-top"><h3>{e.name}</h3><span>{e.date}</span></div><p className="timeline-role">{e.role}</p><p>{e.desc}</p></div></article>)}</div>
         <div className="achievement"><strong>404.92M</strong><span>VND · MERACLE SPONSORSHIP VALUE</span><i>100K+</i><span>YOUTHSPEAK FANPAGE FOLLOWERS</span></div>
       </section>
