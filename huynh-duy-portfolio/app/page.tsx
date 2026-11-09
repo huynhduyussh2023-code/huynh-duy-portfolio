@@ -96,6 +96,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [selectedExperience, setSelectedExperience] = useState<number | null>(null);
+  const [activeExperienceImage, setActiveExperienceImage] = useState(0);
   const t = copy[lang];
   const ids = ["home", "about", "skills", "experience", "works", "contact"];
 
@@ -362,13 +363,108 @@ export default function Home() {
 
       <p>{t.exp[selectedExperience].desc}</p>
 
-      <div className="project-modal-art">
-        <span>0{selectedExperience + 1}</span>
-        <strong>
-          {["HỒI THANH", "MERACLE", "YOUTHSPEAK", "BÁCH HOA"][selectedExperience]}
-        </strong>
-        <span>EXPERIENCE & ACHIEVEMENTS</span>
-      </div>
+      {selectedExperience === 0 ? (
+  <div style={{ marginTop: "28px" }}>
+    {(() => {
+      const images = [
+        "/images/hoi-thanh/images/hoi-thanh/W2.jpg",
+        "/images/hoi-thanh/images/hoi-thanh/W.jpg",
+        "/images/hoi-thanh/images/hoi-thanh/W1.jpg",
+        "/images/hoi-thanh/images/hoi-thanh/W3.jpg",
+        "/images/hoi-thanh/images/hoi-thanh/W4.jpg",
+      ];
+
+      return (
+        <>
+          <div style={{ position: "relative" }}>
+            <img
+              src={images[activeExperienceImage]}
+              alt="Hồi Thanh"
+              style={{
+                width: "100%",
+                height: "420px",
+                objectFit: "cover",
+                borderRadius: "14px",
+                display: "block",
+              }}
+            />
+
+            <button
+              onClick={() =>
+                setActiveExperienceImage(
+                  (activeExperienceImage - 1 + images.length) % images.length
+                )
+              }
+              style={{
+                position: "absolute",
+                left: "14px",
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
+            >
+              ‹
+            </button>
+
+            <button
+              onClick={() =>
+                setActiveExperienceImage(
+                  (activeExperienceImage + 1) % images.length
+                )
+              }
+              style={{
+                position: "absolute",
+                right: "14px",
+                top: "50%",
+                transform: "translateY(-50%)",
+              }}
+            >
+              ›
+            </button>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              gap: "10px",
+              marginTop: "12px",
+              overflowX: "auto",
+            }}
+          >
+            {images.map((src, index) => (
+              <img
+                key={src}
+                src={src}
+                alt={`Hồi Thanh ${index + 1}`}
+                onClick={() => setActiveExperienceImage(index)}
+                style={{
+                  width: "90px",
+                  height: "65px",
+                  objectFit: "cover",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                  opacity: activeExperienceImage === index ? 1 : 0.5,
+                  border:
+                    activeExperienceImage === index
+                      ? "2px solid #38bdf8"
+                      : "2px solid transparent",
+                  flexShrink: 0,
+                }}
+              />
+            ))}
+          </div>
+        </>
+      );
+    })()}
+  </div>
+) : (
+  <div className="project-modal-art">
+    <span>0{selectedExperience + 1}</span>
+    <strong>
+      {["HỒI THANH", "MERACLE", "YOUTHSPEAK", "BÁCH HOA"][selectedExperience]}
+    </strong>
+    <span>EXPERIENCE & ACHIEVEMENTS</span>
+  </div>
+)}
     </div>
   </div>
 )}
