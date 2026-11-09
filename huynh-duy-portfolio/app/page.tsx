@@ -161,95 +161,110 @@ export default function Home() {
         <div className="language-line"><span>{t.language}</span><b>{t.languageText}</b></div>
       </section>
 
-      <section className="section-wrap works-section" id="works">
-        <div className="section-kicker">03 / SELECTED WORKS</div>
-        <div className="section-heading"><h2>{t.worksTitle}<span className="chrome-dot">.</span></h2><p>{t.worksSub}</p></div>
-        <div className="project-grid">
-  {t.projects.map((p, i) => (
-    <article
-      className="project-card"
-      key={p.title}
-      onClick={() => setSelectedProject(i)}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          setSelectedProject(i);
-        }
-      }}
-    >
-      <div className={`project-art art-${i + 1}`}>
-        <span className="art-number">0{i + 1}</span>
-        <span className="art-word">
-          {["STILL", "PULSE", "FRESH", "INTERACTIVE", "MOTION", "STORY"][i]}
-        </span>
-        <span className="art-orb" />
-      </div>
 
-      <div className="project-info">
-        <div className="project-meta">
-          <span>{t.course}: {p.course}</span>
-          <span>{p.role}</span>
+<section className="section-wrap experience-section" id="experience">
+  <div className="section-kicker">03 / EXPERIENCE</div>
+  <div className="section-heading">
+    <h2>{t.experienceTitle}</h2>
+    <p>PROJECTS · PEOPLE · IMPACT</p>
+  </div>
+
+  <div className="timeline">
+    {t.exp.map((e, i) => (
+      <article
+        className="timeline-item"
+        key={e.name}
+        onClick={() => setSelectedExperience(i)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            setSelectedExperience(i);
+          }
+        }}
+      >
+        <div className="timeline-count">0{i + 1}</div>
+        <div className="timeline-main">
+          <div className="timeline-top">
+            <h3>{e.name}</h3>
+            <span>{e.date}</span>
+          </div>
+          <p className="timeline-role">{e.role}</p>
+          <p>{e.desc}</p>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div className="achievement">
+    <strong>404.92M</strong>
+    <span>VND · MERACLE SPONSORSHIP VALUE</span>
+    <i>100K+</i>
+    <span>YOUTHSPEAK FANPAGE FOLLOWERS</span>
+  </div>
+</section>
+
+<section className="section-wrap works-section" id="works">
+  <div className="section-kicker">04 / SELECTED WORKS</div>
+  <div className="section-heading">
+    <h2>{t.worksTitle}<span className="chrome-dot">.</span></h2>
+    <p>{t.worksSub}</p>
+  </div>
+
+  <div className="project-grid">
+    {t.projects.map((p, i) => (
+      <article
+        className="project-card"
+        key={p.title}
+        onClick={() => setSelectedProject(i)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            setSelectedProject(i);
+          }
+        }}
+      >
+        <div className={`project-art art-${i + 1}`}>
+          <span className="art-number">0{i + 1}</span>
+          <span className="art-word">
+            {["STILL", "PULSE", "FRESH", "INTERACTIVE", "MOTION", "STORY"][i]}
+          </span>
+          <span className="art-orb" />
         </div>
 
-        <h3>{p.title}</h3>
-        <p>{p.desc}</p>
+        <div className="project-info">
+          <div className="project-meta">
+            <span>{t.course}: {p.course}</span>
+            <span>{p.role}</span>
+          </div>
 
-        <div className="tags">
-          {p.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
+          <h3>{p.title}</h3>
+          <p>{p.desc}</p>
+
+          <div className="tags">
+            {p.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </div>
+
+          {p.link && (
+            <a
+              className="project-link"
+              href={p.link}
+              target="_blank"
+              rel="noreferrer"
+              onClick={(event) => event.stopPropagation()}
+            >
+              {p.linkLabel} ↗
+            </a>
+          )}
         </div>
+      </article>
+    ))}
+  </div>
+</section>
 
-        {p.link && (
-          <a
-            className="project-link"
-            href={p.link}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(event) => event.stopPropagation()}
-          >
-            {p.linkLabel} ↗
-          </a>
-        )}
-
-      </div>
-    </article>
-  ))}
-</div>
-      </section>
-
-      <section className="section-wrap experience-section" id="experience">
-        <div className="section-kicker">04 / EXPERIENCE</div>
-        <div className="section-heading"><h2>{t.experienceTitle}</h2><p>PROJECTS · PEOPLE · IMPACT</p></div>
-<div className="timeline">
-  {t.exp.map((e, i) => (
-    <article
-      className="timeline-item"
-      key={e.name}
-      onClick={() => setSelectedExperience(i)}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          setSelectedExperience(i);
-        }
-      }}
-    >
-      <div className="timeline-count">0{i + 1}</div>
-      <div className="timeline-main">
-        <div className="timeline-top">
-          <h3>{e.name}</h3>
-          <span>{e.date}</span>
-        </div>
-        <p className="timeline-role">{e.role}</p>
-        <p>{e.desc}</p>
-      </div>
-    </article>
-  ))}
-</div>
-        <div className="achievement"><strong>404.92M</strong><span>VND · MERACLE SPONSORSHIP VALUE</span><i>100K+</i><span>YOUTHSPEAK FANPAGE FOLLOWERS</span></div>
-      </section>
 
       <section className="section-wrap contact-section" id="contact">
         <div className="section-kicker">05 / CONTACT</div><h2>{t.contactTitle}</h2><p>{t.contactText}</p>
