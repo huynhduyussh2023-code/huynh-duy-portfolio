@@ -271,3 +271,22 @@ body::after {
     transition-duration: .01ms !important;
   }
 }
+.portrait-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.portrait-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.7s ease;
+}
+
+.portrait-card:hover .portrait-image {
+  transform: scale(1.04);
+}
