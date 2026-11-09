@@ -315,6 +315,48 @@ export default function Home() {
     </div>
   </div>
 )}
+      {selectedExperience !== null && (
+  <div
+    className="project-modal-backdrop"
+    onClick={() => setSelectedExperience(null)}
+  >
+    <div
+      className="project-modal"
+      role="dialog"
+      aria-modal="true"
+      onClick={(event) => event.stopPropagation()}
+    >
+      <button
+        className="project-modal-close"
+        onClick={() => setSelectedExperience(null)}
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div className="project-modal-kicker">
+        EXPERIENCE DETAILS / 0{selectedExperience + 1}
+      </div>
+
+      <h2>{t.exp[selectedExperience].name}</h2>
+
+      <div className="project-modal-meta">
+        <span>{t.exp[selectedExperience].date}</span>
+        <span>{t.exp[selectedExperience].role}</span>
+      </div>
+
+      <p>{t.exp[selectedExperience].desc}</p>
+
+      <div className="project-modal-art">
+        <span>0{selectedExperience + 1}</span>
+        <strong>
+          {["HỒI THANH", "MERACLE", "YOUTHSPEAK", "BÁCH HOA"][selectedExperience]}
+        </strong>
+        <span>EXPERIENCE & ACHIEVEMENTS</span>
+      </div>
+    </div>
+  </div>
+)}
     </main>
   );
 }
