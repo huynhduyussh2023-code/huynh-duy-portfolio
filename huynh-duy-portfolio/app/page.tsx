@@ -95,6 +95,7 @@ export default function Home() {
   const [lang, setLang] = useState<Lang>("vi");
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [selectedExperience, setSelectedExperience] = useState<number | null>(null);
   const t = copy[lang];
   const ids = ["home", "about", "skills", "works", "experience", "contact"];
 
@@ -221,7 +222,32 @@ export default function Home() {
       <section className="section-wrap experience-section" id="experience">
         <div className="section-kicker">04 / EXPERIENCE</div>
         <div className="section-heading"><h2>{t.experienceTitle}</h2><p>PROJECTS · PEOPLE · IMPACT</p></div>
-        <div className="timeline">{t.exp.map((e, i) => <article className="timeline-item" key={e.name}><div className="timeline-count">0{i+1}</div><div className="timeline-main"><div className="timeline-top"><h3>{e.name}</h3><span>{e.date}</span></div><p className="timeline-role">{e.role}</p><p>{e.desc}</p></div></article>)}</div>
+<div className="timeline">
+  {t.exp.map((e, i) => (
+    <article
+      className="timeline-item"
+      key={e.name}
+      onClick={() => setSelectedExperience(i)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          setSelectedExperience(i);
+        }
+      }}
+    >
+      <div className="timeline-count">0{i + 1}</div>
+      <div className="timeline-main">
+        <div className="timeline-top">
+          <h3>{e.name}</h3>
+          <span>{e.date}</span>
+        </div>
+        <p className="timeline-role">{e.role}</p>
+        <p>{e.desc}</p>
+      </div>
+    </article>
+  ))}
+</div>
         <div className="achievement"><strong>404.92M</strong><span>VND · MERACLE SPONSORSHIP VALUE</span><i>100K+</i><span>YOUTHSPEAK FANPAGE FOLLOWERS</span></div>
       </section>
 
