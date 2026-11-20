@@ -17,6 +17,7 @@ import {
 } from "../content";
 import ImageGallery from "./ImageGallery";
 import Modal from "./Modal";
+import LuxuryEffects from "./LuxuryEffects";
 
 type ModalState = { kind: "project" | "experience"; index: number } | null;
 
@@ -482,6 +483,7 @@ export default function Portfolio() {
           )}
         </Modal>
       )}
+      <LuxuryEffects />
     </main>
   );
 }
