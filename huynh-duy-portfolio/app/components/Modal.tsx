@@ -88,3 +88,22 @@ export default function Modal({
           className="project-modal-close"
           onClick={onClose}
           aria-label={closeLabel}
+          ref={closeRef}
+        >
+          ×
+        </button>
+
+        <div className="project-modal-kicker">{kicker}</div>
+        <h2 id={titleId}>{title}</h2>
+
+        <div className="project-modal-meta">
+          {meta.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
+
+        {children}
+      </div>
+    </div>
+  );
+}
